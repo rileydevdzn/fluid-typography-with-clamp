@@ -27,6 +27,18 @@ Users should be able to:
 
 ### Screenshots
 
+<img
+  src="Order summary - desktop.png"
+  alt="Order summary card for an annual audio plan subscription."
+  title="Order summary card, desktop version"
+  width="250px">
+
+<img
+  src="Order summary - hover.jpg"
+  alt="Order summary card for an annual audio plan subscription showing hover states for purchase button and links."
+  title="Order summary card, desktop version with hover states"
+  width="250px">
+
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
