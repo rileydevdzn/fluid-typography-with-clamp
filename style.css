@@ -1,0 +1,167 @@
+/*Import fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/*Set color scheme*/
+:root {
+  --primary-bg: #E0E8FF;
+  --primary-bright-blue: #382AE1;
+  --primary-bright-blue-active: #766CF1;
+  --neutral-white: #FFFFFF;
+  --accent-verypale-blue: #F7F9FF;
+  --body-txt: #717FA6;
+  --title-txt: #1F2E55;
+}
+
+/*Zero out defaults*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primary-bg);
+  background-image: url("https://assets.codepen.io/3270335/FEM2-pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Red Hat Display, sans-serif;
+  font-weight: 500;
+  color: var(--body-txt);
+  font-size: 16px;
+  line-height: calc(1em + 10px);
+}
+
+a, button {
+  cursor: pointer;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.order-card {
+  width: clamp(327px, 100vw - 3rem, 450px);
+  min-height: 567px;
+  background-color: var(--neutral-white);
+  border-radius: 20px;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img.order-card-hero {
+  display: block;
+  max-width: 100%;
+  min-height: 160px;
+  border-radius: 20px 20px 0 0; 
+  margin-bottom: -3px;
+}
+
+.order-txt {
+  width: clamp(279px, 80%, 354px);
+  height: clamp(343px, 60%, 384px);
+  margin: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.25rem;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 900;
+  color: var(--title-txt);
+  font-size: 28px;
+  line-height: 1.3em;
+  margin-bottom: 1rem;
+}
+
+.audio-plan-summary {
+  background-color: var(--accent-verypale-blue);
+  border-radius: 11px;
+  padding: 25px 24px;
+  margin: 0 0 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  line-height: 1.3em;
+}
+
+.audio-plan-details {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.plan-type {
+  font-weight: 900;
+  color: var(--title-txt);
+}
+
+a.change-plan {
+  font-weight: 700;
+  color: var(--primary-bright-blue);
+  font-size: max(calc(1em - 2px), 13px);
+  text-decoration: underline;
+}
+
+a.change-plan:hover, a.change-plan:focus {
+  color: var(--primary-bright-blue-active);
+}
+
+.card-actions {
+  width: 100%;
+}
+
+a.cancel-order {
+  display: block;
+  font-weight: 900;
+  font-size: 15px;
+}
+
+a.cancel-order:hover, a.cancel-order:focus {
+  color: var(--title-txt);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  background-color: var(--primary-bright-blue);
+  border-radius: 11px;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  margin-bottom: 2rem;
+  font-weight: 900;
+  color: var(--neutral-white);
+  font-size: 15px;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button.payment-btn:hover, button.payment-btn:focus {
+  background-color: var(--primary-bright-blue-active);
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+    background-image: url("https://assets.codepen.io/3270335/FEM2-pattern-background-mobile.svg");
+  }
+  .order-txt {
+    margin: 2rem 0;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .audio-plan-summary {
+    font-size: 0.94em;
+    padding: 17px 16px;
+    margin: 0.25rem 0 0.25rem;
+  }
+  button {
+    margin-bottom: 1.5rem;
+  }
+}
