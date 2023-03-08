@@ -68,5 +68,5 @@ Using relative em units was useful in this simple project, though I could see ho
    
 ## Author
 
-- Website - [Erin Riley](https://rileydevdzn.webflow.io)
+- Website - [rileydevdzn](https://rileydevdzn.webflow.io)
 - Frontend Mentor - [@devrileymk](https://www.frontendmentor.io/profile/devrileymk)
