@@ -21,7 +21,7 @@
 
 body {
   background-color: var(--primary-bg);
-  background-image: url("https://assets.codepen.io/3270335/FEM2-pattern-background-desktop.svg");
+  background-image: url("./ordersum-pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: Red Hat Display, sans-serif;
@@ -148,7 +148,7 @@ button.payment-btn:hover, button.payment-btn:focus {
 @media (max-width: 600px) {
   body {
     font-size: 15px;
-    background-image: url("https://assets.codepen.io/3270335/FEM2-pattern-background-mobile.svg");
+    background-image: url("./ordersum-pattern-background-mobile.svg");
   }
   .order-txt {
     margin: 2rem 0;
