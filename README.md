@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Order summary card](https://rileydevdzn.github.io/order-summary-card/)
 
 ## My process
 
