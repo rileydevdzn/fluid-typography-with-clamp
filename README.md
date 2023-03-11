@@ -31,11 +31,11 @@ Users should be able to:
   <img
     src="ordersum-desktop-design.jpg"
     alt="Order summary card for an annual audio plan subscription."
-    height="300px">
+    height="275px">
   <img
     src="Order summary - hover.jpg"
     alt="Order summary card for an annual audio plan subscription showing hover states when a user interacts with the purchase button and links."
-    height="300px">
+    height="275px">
   <p><em>Desktop static (left) and hover state (right) designs</em></p>
 </div>
 
