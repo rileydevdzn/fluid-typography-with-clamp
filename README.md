@@ -1,12 +1,14 @@
-# Order summary card
-
-Building a responsive web component with Flexbox and interactive hover states.
+<div align="center">
+  <img
+    src="Order summary - desktop.png"
+    alt="Order summary card for an annual audio plan subscription."
+    height="300px">
+</div>
 
 ## Table of contents
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -25,19 +27,17 @@ Users should be able to:
 
 - See hover states for interactive elements
 
-### Screenshots
-
-<img
-  src="Order summary - desktop.png"
-  alt="Order summary card for an annual audio plan subscription."
-  title="Order summary card, desktop version"
-  width="300px">
-
-<img
-  src="Order summary - hover.jpg"
-  alt="Order summary card for an annual audio plan subscription showing hover states for purchase button and links."
-  title="Order summary card, desktop version with hover states"
-  width="300px">
+<div align="center">
+  <img
+    src="ordersum-desktop-design.jpg"
+    alt="Order summary card for an annual audio plan subscription."
+    height="200px">
+  <img
+    src="Order summary - hover.jpg"
+    alt="Order summary card for an annual audio plan subscription showing hover states when a user interacts with the purchase button and links."
+    height="200px">
+  <p><em>Desktop static (left) and hover state (right) designs</em></p>
+</div>
 
 ### Links
 
@@ -55,7 +55,7 @@ Users should be able to:
 
 ### What I learned
 
-This project was a great exercise in design-to-code. There were a lot of little details in the desktop vs. mobile designs, and this project gave me a lot of ideas for things to explore further, including improving my skills with CSS functions and fluid typography, to find solutions that are more effective than writing media queries for every screen size. I also experimented with em units to get a feel for how they scale within the cascade.  
+This project was a great exercise in design-to-code. There were a lot of little details in the desktop vs. mobile designs, and this project gave me a lot of ideas for things to explore further, like improving my skills with CSS functions and fluid typography, to find solutions that are more effective than writing media queries for every screen size. I also experimented with em units to get a feel for how they scale within the cascade.  
 
 ### Continued development
 
@@ -68,5 +68,5 @@ Using relative em units was useful in this simple project, though I could see ho
    
 ## Author
 
-- Website - [rileydevdzn](https://rileydevdzn.webflow.io)
+- Website - [E. Riley](https://rileydevdzn.webflow.io)
 - Frontend Mentor - [@devrileymk](https://www.frontendmentor.io/profile/devrileymk)
