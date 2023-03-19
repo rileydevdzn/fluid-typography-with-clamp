@@ -48,6 +48,7 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- Fluid typography with viewport units and the CSS `clamp()` function
 - CSS variables
 - Flexbox
 - Responsive design
@@ -55,16 +56,60 @@ Users should be able to:
 
 ### What I learned
 
-This project was a great exercise in design-to-code. There were a lot of little details in the desktop vs. mobile designs, and this project gave me a lot of ideas for things to explore further, like improving my skills with CSS functions and fluid typography, to find solutions that are more effective than writing media queries for every screen size. I also experimented with em units to get a feel for how they scale within the cascade.  
+To make the font sizes responsive, I used the CSS `clamp()` function and viewport units.
+
+The min and max values were straightforward. For that pesky middle variable (preferred value), I used a delta (amount of change) and a base (starting) value formula instead of a single numerical value. 
+
+There are cases where a single numerical value would be preferred, I wanted to explore the formula approach for this project.
+
+First, I was interested in figuring out the delta, how many pixels should the font size change by for every pixel of change in viewport width? I calculated this using the min and max font sizes and selected min and max viewport widths. For the `<h1>` heading in this design, for example, the minimum font size in the design was 22px at a viewport width of 375px, and the maximum font size was 28px at a viewport width of 1440px. 
+
+So the delta calculation looked like:
+```
+delta = (fontMax - fontMin) / (viewportMax - viewportMin)
+
+delta = (28px - 22px) / (1440px - 375px)
+
+delta = 0.00563
+```
+
+I kept the delta value at 5 decimal places (0.00563 for the `<h1>` example) for my calculations, or three decimals (0.563) in viewport units (0.00563 * 100).
+
+Next, I needed to figure out the base or starting value to apply this change to. Now that I had the delta, I could compare the resulting font size with this change applied at the maximum viewport width to the maximum desired font size; the difference would be my starting value.
+
+My starting value calculation looked like this:
+```
+starting value = fontMax - (viewportMax * delta) 
+
+starting value = 28px - (1440px * 0.00563)
+
+starting value = 19.89px
+```
+
+So the preferred value formula (middle variable in my clamp function) for my `<h1>` element would look like:
+```
+19.89px + 0.563vw
+```
+
+After some testing and playing around with the values at various viewport widths to achieve a consistent visual, I refined my formula a bit:
+```
+20px + 0.555vw
+```
+
+So my `clamp()` function looked like this for the `<h1>` element:
+```
+font-size: clamp(22px, 20px + 0.555vw, 28px);
+```
 
 ### Continued development
 
-Using relative em units was useful in this simple project, though I could see how they could potentially get out of control on a complex build. I'm going to dive deeper into fluid typography on a future project using viewport units, and how they could be used with other responsive techniques, like CSS functions (calc, clamp, etc.). 
+I applied CSS `clamp()` to individual elements in this project. In a future project I'd like to experiment with "t-shirt sizing" fonts, declaring global variables on the root using `clamp()` to set a font scale.
 
 ### Useful resources
 
- - [CSS Tricks: Fluid typography](https://css-tricks.com/snippets/css/fluid-typography/) - Introduction to fluid typography using CSS calc function. When I was researching typography methods, this inspired me to look into viewport units and fluid typography in the first place.
- - [CSS Tricks: Simplified fluid typography](https://css-tricks.com/simplified-fluid-typography/) - Fluid typography incorporating CSS functions and variables. I've been using CSS variables and functions, pretty excited to combine all three in an upcoming project! 
+- [CSS Tricks: Simplified fluid typography](https://css-tricks.com/simplified-fluid-typography/) - Introduction to fluid typography using CSS calc function. When I was researching typography methods, this inspired me to look into viewport units and fluid typography in the first place.
+- [CSS Tricks: Fluid typography](https://css-tricks.com/snippets/css/fluid-typography/) - Slightly older article than the first one, but there's more links for further reading at the bottom to explore.
+- [Utopia: Fluid responsive design](https://utopia.fyi/) - Diving further into the possibilities of fluid design with typography, spacing, and fluid grids. Tools include visualizations of how the code implements which I found helpful.
    
 ## Author
 
