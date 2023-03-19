@@ -27,11 +27,11 @@ body {
   font-family: Red Hat Display, sans-serif;
   font-weight: 500;
   color: var(--body-txt);
-  font-size: 16px;
-  line-height: calc(1em + 10px);
+  font-size: 15px;
+  line-height: 20px;
 }
 
-a, button {
+a {
   cursor: pointer;
   transition: color 200ms ease, background-color 200ms ease;
 }
@@ -49,52 +49,61 @@ a, button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-img.order-card-hero {
+.order-card-hero {
   display: block;
   max-width: 100%;
   min-height: 160px;
-  border-radius: 20px 20px 0 0; 
-  margin-bottom: -3px;
+  border-radius: 20px 20px 0 0;
+  margin-bottom: -3px; 
 }
 
 .order-txt {
-  width: clamp(279px, 80%, 354px);
-  height: clamp(343px, 60%, 384px);
-  margin: 3rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  row-gap: 1.25rem;
-  text-align: center;
+  width: 100%;
+  padding: clamp(2rem, 1.65rem + 1.5vw, 3rem);;
 }
 
 h1 {
   font-weight: 900;
   color: var(--title-txt);
-  font-size: 28px;
-  line-height: 1.3em;
-  margin-bottom: 1rem;
+  font-size: clamp(22px, 20px + 0.555vw, 28px);
+  line-height: 1.32em;
+}
+
+.summary-p {
+  max-width: 30ch;
+  margin: 1rem auto clamp(1.25rem, 1.1625rem + 0.375vw, 1.5rem) auto;
+  font-size: clamp(15px, 14px + 0.2vw, 16px);
+  line-height: 1.64em;
 }
 
 .audio-plan-summary {
   width: 100%;
+  padding: clamp(1rem, 0.825rem + 0.75vw, 1.5rem);
   background-color: var(--accent-verypale-blue);
   border-radius: 11px;
-  padding: 25px 24px;
-  margin: 0 0 0.75rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-size: 1em;
-  line-height: 1.3em;
 }
 
 .audio-plan-details {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  column-gap: 20px;
+  row-gap: clamp(3px, 1.97px + 0.28vw, 6px);
+}
+
+.audio-plan-img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.25rem;
+}
+
+.plan-type, .plan-price {
+  font-size: clamp(14px, 13.3px + 0.2vw, 16px);
+  line-height: 1.325em;
 }
 
 .plan-type {
@@ -103,9 +112,11 @@ h1 {
 }
 
 a.change-plan {
+  margin-left: auto;
   font-weight: 700;
   color: var(--primary-bright-blue);
-  font-size: max(calc(1em - 2px), 13px);
+  font-size: clamp(13px, 12px + 0.2vw, 14px);;
+  line-height: 1.325em;
   text-decoration: underline;
 }
 
@@ -113,56 +124,38 @@ a.change-plan:hover, a.change-plan:focus {
   color: var(--primary-bright-blue-active);
 }
 
-.card-actions {
+a.go2pmt {
+  display: block;
   width: 100%;
+  height: 3.125rem;
+  padding: 0.9375rem 0;
+  margin: clamp(1.5rem, 1.3375rem + 0.773vw, 2rem) 0;
+  background-color: var(--primary-bright-blue);
+  border-radius: 11px;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  font-weight: 900;
+  color: var(--neutral-white);  
+}
+
+a.go2pmt:hover, a.go2pmt:focus {
+  background-color: var(--primary-bright-blue-active);
 }
 
 a.cancel-order {
   display: block;
   font-weight: 900;
-  font-size: 15px;
 }
 
 a.cancel-order:hover, a.cancel-order:focus {
   color: var(--title-txt);
 }
 
-button {
-  width: 100%;
-  height: 50px;
-  background-color: var(--primary-bright-blue);
-  border-radius: 11px;
-  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
-  margin-bottom: 2rem;
-  font-weight: 900;
-  color: var(--neutral-white);
-  font-size: 15px;
-  border: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-button.payment-btn:hover, button.payment-btn:focus {
-  background-color: var(--primary-bright-blue-active);
-}
 
 @media (max-width: 600px) {
   body {
-    font-size: 15px;
     background-image: url("./ordersum-pattern-background-mobile.svg");
   }
-  .order-txt {
-    margin: 2rem 0;
-  }
-  h1 {
-    font-size: 22px;
-  }
-  .audio-plan-summary {
-    font-size: 0.94em;
-    padding: 17px 16px;
-    margin: 0.25rem 0 0.25rem;
-  }
-  button {
-    margin-bottom: 1.5rem;
+  .order-card-hero {
+    margin-bottom: 0;
   }
 }
