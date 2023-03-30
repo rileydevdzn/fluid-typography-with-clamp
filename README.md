@@ -41,7 +41,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Order summary card](https://rileydevdzn.github.io/order-summary-card/)
+- Solution URL: [Order summary card](https://rileydevdzn.github.io/fluid-typography-with-clamp/)
 
 ## My process
 
